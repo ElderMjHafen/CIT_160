@@ -4,25 +4,20 @@
 <meta charset="utf-8">
 <title>Greeting Program</title>
 <script>
-/* Defining Table
- * Input: A person's name
- * Processing: Create a greeting for that person
- * Output: The greeting
- */
 function greetUser() {
-    // This line prompts the user to type in his name.
-    let name = prompt("What is your name?");
+    let name = document.getElementById('nameInputBox').value;
 
-    // Create a personalized greeting for the user.
     let greeting = "Greetings, " + name + ". Are you having a good day? I hope you are.";
 
-    // The next line causes the computer to display
-    // a greeting to the user in a popup window.
     alert(greeting);
 }
 </script>
 </head>
-<body>                                      
-    <button type="button" onclick="greetUser()">Click here</button>
+<body>
+    <h1>Greeting page!</h1>
+    <p>What is your name?</p>
+    <input type="text" id="nameInputBox">
+    <button type="button" onclick="greetUser()"> Enter</button>
+    <div id="outputDiv"></div>
 </body>
 </html>
