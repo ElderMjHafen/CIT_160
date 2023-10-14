@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Convert volume to liter</title>
+
+<script>
+/* Input: convert into liters
+ * Processing: convert the volume into liters.
+ * Output: the volume converted to liters
+ */
+function volToLit() {
+    // Read a volume from the user.
+    let text = document.getElementById('volumeInputBox').value;
+
+    // Convert what the user typed from text into a number.
+    let v = parseFloat(text);
+
+    // Convert the volume into liters.
+    let r = v/3.785;
+    let l = r.toFixed(2);
+
+    // Display the liter to the user.
+    document.getElementById('literDiv').innerHTML = l + "Lt";
+}
+</script>
+</head>
+
+<body>                               
+Enter a volume in liters: <input type="text" id="volumeInputBox">
+<button type="button" onclick="volToLit()">Convert</button>
+<div id="literDiv"></div>                     
+</body>            
+</html>

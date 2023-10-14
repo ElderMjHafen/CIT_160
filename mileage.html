@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Mileage Tracking</title>
+
+<script>
+    function mileage() {
+        let startingOdometer = parseFloat(document.getElementById('startMileInput').value);
+        let endingOdometer = parseFloat(document.getElementById('endingMileInput').value);
+        let usedGal = parseFloat(document.getElementById('usedGalInput').value);
+
+        let totalMiles = endingOdometer - startingOdometer;
+        let mpg = totalMiles / usedGal;
+
+        let multiplier = 10;
+        mpg = (mpg * multiplier) / multiplier;
+        r = mpg.toFixed(2);
+
+        document.getElementById('outputDiv').innerHTML = r+" MPG";
+    }
+</script>
+</head>
+
+    <body>
+        Please enter the Odometer below:<br>
+        Starting Odometer <input type="text" id="startMileInput" size="6"><br>
+        Ending Odometer <input type="text" id="endingMileInput" size="6"><br>
+        Used Gas Gallons <input type="text" id="usedGalInput" size="5"><br>
+        <button type="button" onclick="mileage()">MPG Result</button>
+        <div id="outputDiv"></div>
+    </body>
+</html>
