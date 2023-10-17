@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Test 3</title>
+<script>
+    function computeIII() {
+        let x = 1, y = 7;
+        let message = "Welcome";
+        if (x < 2) {
+            if (y > 10) {
+                message = "Hello";
+            }
+        }
+        else {
+            message = "Goodbye";
+        }
+        document.getElementById('output').innerHTML = message;
+    }
+
+    function computeIV() {
+        let x = 1, y = 7;
+        let message = "Welcome";
+        if (x < 2) {
+            if (y > 10) {
+                message = "Hello";
+            }
+            else {
+                message = "Goodbye";
+            }
+        }
+        document.getElementById('output').innerHTML = message;
+    }
+</script>
+</head>
+
+<body>
+    <h1>Test</h1>
+    <button type="button" onclick="computeIII()">Test 3</button><br>
+    <button type="button" onclick="computeIV()">Test 4</button><br>
+    Output: <div id="output"></div>
+</body>
+</html>
