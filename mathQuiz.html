@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Math Quiz</title>
+<script>
+    function formula() {
+    let a = parseFloat(document.getElementById('formula1').value);
+    let b = parseFloat(document.getElementById('formula2').value);
+    let c = document.getElementById('c').value;
+    let userInput = parseFloat(document.getElementById('userInput').value)
+    let displayAnswer = document.getElementById('displayAnswer');
+
+    let answer;
+     if (c == "+") {
+        answer = a + b;
+     } else if (c == "*") {
+        answer = a * b;
+     } else if (c == "-") {
+        answer = a - b;
+     } else if (c == "/") {
+        answer = a / b;
+     } else {
+        displayAnswer.textContent = "Enter a valid operator. (+, -, /, *)"
+     }
+
+     if (answer == userInput) {
+        displayAnswer.textContent = "Correct! Good job.";
+     } else {
+        displayAnswer.textContent = "Incorrect! The correct answer was " + answer + ".";
+     }
+
+}
+</script>
+</head>
+<body>
+    <h1>Math Test</h1>                    
+    <input type="number" id="formula1"> First Number<br>
+    <input type="text" id="c"> Operater (+, /, -, *)<br>
+    <input type="number" id="formula2"> Second Number<br>
+    <h2>---------------------</h2>
+    <input type="number" id='userInput'> Your Answer<br>
+
+    <button type="button" onclick="formula()">Check</button><br>
+    <div id="displayAnswer"></div>
+</html>
