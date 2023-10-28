@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Discount</title>
+<script>
+    function compute() {
+        var dayOfWeek = new Date().getDay();
+        var subtotal = parseFloat(document.getElementById('subtotal').value);
+
+        if (subtotal > 50 && (dayOfWeek == 2 ^ dayOfWeek == 3)) {
+            total = ((subtotal - (subtotal * 0.10)));
+    
+        }
+        else {
+            total = subtotal;
+        }
+        totalPlusTax = total + (total * 0.06);
+        document.getElementById('rate').innerHTML = "$" + totalPlusTax.toFixed(2);
+    }
+</script>
+</head>
+
+<body>
+    <h1>Discount</h1>
+    Price: <input type="number" id="subtotal"><br>
+    <button type="button" onclick="compute()">compute Discount</button><br>
+    New Price: <div id="rate"></div>
+</body>
+</html>

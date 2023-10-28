@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Alert</title>
+<script>
+    function alertSystem() {
+        var now = new Date();
+        var month = now.getMonth();
+        var dayOfMonth = now.getDate();
+        var dayOfWeek = now.getDay();
+
+        if (dayOfWeek == 0 || dayOfWeek == 6) {
+            Alert = "Sleep in.";
+        }
+        else {
+            Alert = "Get up!";
+        }
+
+        if (month == 0 || now == 1) {
+            Alert = "Sleep in.";
+        }
+        else if ((month == 0 && dayOfMonth == 1) || (month == 6 && dayOfMonth == 4)
+        || (month == 11 && dayOfMonth == 25) ) {
+            Alert = "Sleep in.";
+        }else {
+            Alert = "Get up!";
+        }
+        document.getElementById("response").innerHTML = Alert;
+    }
+</script>
+</head>
+
+<body>
+    <h1>Alarm</h1>
+    <!--Enter date: <input type="number" id="enterDate"><br>-->
+    <button type="button" onclick="alertSystem()">Enter Date</button><br>
+    Alert: <div id="response"></div>
+</body>
+</html>

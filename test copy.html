@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Rate of Change</title>
+<script>
+    function computeRateOfChange() {
+        let prevPrice = parseFloat(document.getElementById('subtotal').value);
+        let currPrice = parseFloat(document.getElementById('currPrice').value);
+
+        let rateOfChange = (currPrice - prevPrice) / prevPrice;
+        r = rateOfChange.toFixed(2);
+
+        document.getElementById('rate').innerHTML = r;
+    }
+</script>
+</head>
+
+<body>
+    <h1>Rate of Change</h1>
+    Previous Price <input type="text" id="subtotal"><br>
+    <button type="button" onclick="computeRateOfChange()">Rate of Change</button><br>
+    Result: <div id="rate"></div>
+</body>
+</html>

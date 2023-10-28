@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Test 3</title>
+<script>
+    function computeIII() {
+        let x = 2, y = 6, z = 5;
+        let result = (x < 3 && (y < 7 ^ z != 3));
+        document.getElementById('output').innerHTML = result;
+    }
+</script>
+</head>
+
+<body>
+    <h1>Test</h1>
+    <button type="button" onclick="computeIII()">Test 3</button><br>
+    Output: <div id="output"></div>
+</body>
+</html>
