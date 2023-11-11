@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Sum of odds</title>
+<script>
+    function compute() {
+        /*This will set the input as the limit, once you press enter, it will start 
+        i as 1 and add the next odd number to the i variable, until it reach the limit.
+        */
+            let n = 0
+            var limit = parseFloat(document.getElementById('limit').value)
+            for (let i = 1; i <= limit; i += 2) {
+                n += i;
+            }
+            document.getElementById('num').innerHTML = n;
+        }
+</script>
+</head>
+
+<body>
+    <h1>Sum of odds</h1>
+    Number: <input type="number" id="limit">
+    <button type="button" onclick="compute()">Enter</button><br>
+    <div id="num"></div>
+</body>
+</html>

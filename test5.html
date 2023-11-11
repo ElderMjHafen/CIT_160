@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Test 3</title>
+<script>
+    function isPrime() {
+        var candidate = parseInt(document.getElementById('integer').value);
+
+        // Number of factors that evenly divide candidate
+        var factorCount = 0;
+
+        for (var divisor = 1; divisor <= candidate; divisor++) {
+            var remainder = candidate % divisor;
+            if (remainder == 0) {
+                factorCount++;
+                document.getElementById('output').innerHTML = remainder
+            }
+        }
+
+        // Determine the output and show it to the user.
+        var output;
+        if (factorCount == 2) {
+            output = candidate + ' is prime';
+        }
+        else {
+            output = candidate + ' is not prime';
+        }
+        document.getElementById('outputDiv').innerHTML = output;
+
+        let x = 1, y = 7;
+        let message = "Welcome";
+        if (x < 2) {
+            if (y > 10) {
+                message = "Hello";
+            }
+        }
+        else {
+            message = "Goodbye";
+        }
+        document.getElementById('output2').innerHTML = message;
+            }
+</script>
+</head>
+
+<body>
+    <h1>Test</h1>
+    Enter: <input type="text" id="integer">
+    <button type="button" onclick="isPrime()">Test 3</button><br>
+    <div id="outputDiv"></div>
+    <div id="output"></div>
+    <div id="output2"></div>
+</body>
+</html>

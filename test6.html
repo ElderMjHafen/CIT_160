@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Title</title>
+<script>
+/* Input: Enter 2 numbers
+ * Processing: Check if inputs are both more than 5 or sum up to 20
+ * Output: Returns true if the inputs match these otherwise returns false
+ */
+ function compute() {
+    let a = parseFloat(document.getElementById('one').value);
+    let b = parseFloat(document.getElementById('two').value);
+    let c = a + b;
+
+    let result = ((a > 5 && b > 5) || c > 20);
+    document.getElementById('output').innerHTML = result;
+ }
+</script>
+</head>
+
+<body>
+Please enter two numbers:
+<input type="text" id="one" size="5">
+<input type="text" id="two" size="5">
+<button type="button" onclick="compute()">Click</button>
+<div id="output"></div>
+</body>
+</html>

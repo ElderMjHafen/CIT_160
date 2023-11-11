@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Five times</title>
+<script>
+    function compute() {
+        let output = "";
+        for (i = 1; i <= 12; i++) {
+            output += '5 x ';
+            output += i;
+            let num = 5 * i;
+            output += ' = ' + num;
+            output+='<br>';
+        }
+        document.getElementById('num').innerHTML = output;
+    }
+</script>
+</head>
+
+<body>
+    <h1>Five times</h1>
+    <button type="button" onclick="compute()">Enter</button><br>
+    <div id="num"></div>
+</body>
+</html>
