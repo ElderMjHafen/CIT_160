@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Test 3</title>
+<script>
+    function computeIII() {
+        let i = document.getElementById('number1').value;
+        let j = document.getElementById('number2').value;
+        let k = "Welcome";
+
+        document.getElementById('output').innerHTML = k;
+    }
+
+    function computeIV() {
+        let m = parseInt(document.getElementById('number1').value);
+        let n = parseFloat(document.getElementById('number2').value);
+        let p = m + n;
+
+        document.getElementById('output').innerHTML = p;
+    }
+    function computeV() {
+        let a = 2, b = -3, c = 14, d = 5;
+        let result = 6 + c / a % d + b;
+        document.getElementById('output').innerHTML = result;
+    }
+    function computeVI() {
+        let x = 2, y = 6, z = 5;
+        let result = (x > 5 ^ !(y == 7 || z == 3));
+        document.getElementById('output').innerHTML = result;
+    }
+    function computeVII() {
+        let i = 0, limit = 5;
+        while (i < limit) {
+            alert("Apple");
+            i += 2;
+        }
+        document.getElementById('output').innerHTML = result;
+    }
+    function computeVIII() {
+        let i = 0;
+        while (i < 3) {
+            alert("Snow");
+        }
+        document.getElementById('output').innerHTML = i;
+    }
+    function computeIX() {
+        let s = [ 4, -1, 0, 5, 9, 1, 2, 4 ];
+        let value = s[3] - s[1];
+        document.getElementById('output').innerHTML = value;
+    }
+
+    function getName() {
+        var givenName = document.getElementById('Letter1').value;
+        var familyName = document.getElementById('letter2').value;
+        var fn = makeFullName(givenName, familyName);
+        document.getElementById('output').innerHTML = fn;
+    }
+
+    function makeFullName(givenName, familyName) {
+        var name = givenName + ", " +familyName;
+
+        return name;
+    }
+    function compute() {
+        //
+    };
+</script>
+</head>
+
+<body>
+    <h1>Test</h1>
+    Number1: <input type="number" id="number1">
+    Number2: <input type="number" id="number2"><br><br>
+    givenName: <input type="text" id="Letter1">
+    familyName: <input type="text" id="letter2">
+    <button type="button" onclick="computeIII()">Test 3</button><br>
+    <button type="button" onclick="computeIV()">Test 4</button><br>
+    <button type="button" onclick="computeV()">Test 5</button><br>
+    <button type="button" onclick="computeVI()">Test 6</button><br>
+    <button type="button" onclick="computeVII()">Test 7</button><br>
+    <button type="button" onclick="computeVIII()">Test 8</button><br>
+    <button type="button" onclick="computeIX()">Test 9</button><br>
+    <button type="button" onclick="getName()">getName</button><br>
+    Output: <div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Wind Chill</title>
+<script>
+/* Input: Set a Fahrenheit, and wind speed
+ * Processing: Call a function, and use a formula to calculate the wind chill
+ * Output: Returns the results and display the number
+ */
+function doInputOutput() {
+    const startValue = parseFloat(document.getElementById('startValue').value);
+    const endValue = parseFloat(document.getElementById('endValue').value);
+    const months = parseFloat(document.getElementById('months').value);
+    const des = depreciation(startValue, endValue, months);
+    document.getElementById('output').innerHTML = depreciation(startValue, endValue, months);
+}
+function depreciation(startValue, endValue, months) {
+    const d = (startValue - endValue)/months;
+    return d;
+}
+</script>
+</head>
+
+<body>
+    startValue: <input type="text" id="startValue" size="5"><br>
+    endValue: <input type="text" id="endValue" size="5"><br>
+    months: <input type="text" id="months" size="5"><br>
+    <button type="button" onclick="doInputOutput()">Wind Chill</button>
+    <div id="output"></div>
+</body>
+</html>

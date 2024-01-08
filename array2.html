@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Test</title>
+<script>
+    /* Defining Table
+    * Input: no user input
+    * Processing: Test the countEvens and multiply functions by calling them.
+    * Output: The values returned from the countEvens and multiply functions.
+    */
+    function test() {
+        let list1 = [ 17, 8, 9, 5, 20 ];
+        let list2 = [ 12, 4, 8, 15, 17, 5, 20, 11 ];
+
+        // Test the countEvens function by calling it two times.
+        let count1 = countEvens(list1);
+        let count2 = countEvens(list2);
+
+        // Test the multiply function by calling it two times.
+        let mult1 = multiply(list1,3);
+        let mult2 = multiply(list2,2);
+
+        // Build a string to display to the user.
+        let output =
+                count1 + '<br>' +
+                count2 + '<br>' +
+                mult1 + '<br>' +
+                mult2;
+
+        // Display the output string for the user to see.
+        document.getElementById('output').innerHTML = output;
+    }
+    function countEvens(list) {
+        let value = 0;
+        for (let i = 0;  i < list.length;  i++) {
+            if (list[i] % 2 == 0) {
+                value += 1;
+            }
+        }
+        return value;
+    }
+    function multiply(list, x) {
+        for (let i = 0;  i < list.length;  i++) {
+            if (list[i] > list[0]) {
+                list[i] = ", " + list[i] * x;
+            }
+            else {
+                list[i] = list[i] * x;
+            }
+            
+        }
+        let l = "["+list+"]";
+        return l;
+    }
+</script>
+</head>
+<body>
+    <h1>Test</h1>
+    <button type="button" onclick="test()">Result:</button><br>
+    <div id='output'></div>
+</body>
+</html>
